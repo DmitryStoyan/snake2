@@ -33,7 +33,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: "css", to: "css" }, // Копирование файлов из папки css в папку dist/css
+        { from: "css", to: "css" },
+        { from: "images", to: "images" }, // Копирование файлов из папки images в папку dist/images
       ],
     }),
   ],
