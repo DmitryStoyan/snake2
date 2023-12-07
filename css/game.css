@@ -7,10 +7,10 @@ canvas {
   height: 80vh;
 }
 
-@media screen and (max-width: 460px) {
+/* @media screen and (max-width: 460px) {
   canvas {
     border: 5px red solid;
     width: 100vw;
     height: 90vh;
   }
-}
+} */
