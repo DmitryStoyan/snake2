@@ -3,16 +3,16 @@ document.addEventListener("DOMContentLoaded", function () {
   playButton.addEventListener("click", function () {
     window.location.href = "../game.html";
   });
-});
 
-const installIcon = document.querySelector(".downloads-button");
+  const installIcon = document.querySelector(".downloads-button");
 
-// Установка
-let defaultInstallEvent = null;
-window.addEventListener("beforeinstallprompt", (event) => {
-  event.preventDefault();
-  defaultInstallEvent = event;
-});
-installIcon.addEventListener("click", (event) => {
-  defaultInstallEvent.prompt();
+  // Установка
+  let defaultInstallEvent = null;
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    defaultInstallEvent = event;
+  });
+  installIcon.addEventListener("click", (event) => {
+    defaultInstallEvent.prompt();
+  });
 });
