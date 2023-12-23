@@ -13,6 +13,13 @@ document.addEventListener("DOMContentLoaded", function () {
     defaultInstallEvent = event;
   });
   installIcon.addEventListener("click", (event) => {
-    defaultInstallEvent.prompt();
+    if (defaultInstallEvent) {
+      defaultInstallEvent.prompt();
+    } else {
+      // Обработка ситуации, когда событие beforeinstallprompt не было запущено
+      // Можно предоставить альтернативный опыт для установки приложения
+      // или вывести сообщение об ошибке
+      console.error("Событие beforeinstallprompt не было запущено");
+    }
   });
 });
