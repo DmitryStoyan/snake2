@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 const path = require("path");
 
 module.exports = {
@@ -34,8 +35,24 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         { from: "css", to: "css" },
-        { from: "images", to: "images" }, // Копирование файлов из папки images в папку dist/images
+        { from: "images", to: "images" },
       ],
+    }),
+    new WebpackManifestPlugin({
+      fileName: "manifest.webmanifest",
+      publicPath: "/",
+      generate: (seed, files) => ({
+        name: "Snake",
+        start_url: "index.html",
+        orientation: "portrait",
+        display: "fullscreen",
+        icons: files.map((file) => ({
+          src: file.file,
+          sizes: "512x512",
+          type: "image/png",
+        })),
+        // Другие параметры манифеста
+      }),
     }),
   ],
 };

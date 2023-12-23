@@ -1,0 +1,40 @@
+{
+  "name": "Snake",
+  "start_url": "index.html",
+  "orientation": "portrait",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
